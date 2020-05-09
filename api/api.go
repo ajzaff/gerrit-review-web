@@ -23,8 +23,8 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/google/git-appraise/repository"
-	"github.com/google/git-appraise/review"
+	"github.com/ajzaff/git-review/repository"
+	"github.com/ajzaff/git-review/review"
 )
 
 const (

@@ -17,8 +17,8 @@ limitations under the License.
 package api
 
 import (
-	"github.com/google/git-appraise/repository"
-	"github.com/google/git-appraise/review"
+	"github.com/ajzaff/git-review/repository"
+	"github.com/ajzaff/git-review/review"
 )
 
 // CommitOverview encapsulates the fine-grained details of a commit.

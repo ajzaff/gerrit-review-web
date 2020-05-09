@@ -1,5 +1,5 @@
 build:	test
-	go build -o $(GOPATH)/bin/git-appraise-web git-appraise-web/git-appraise-web.go
+	go build -o $(GOPATH)/bin/git-review-web git-review-web/git-review-web.go
 
 test:	vet
 	go test ./...

@@ -25,13 +25,13 @@ echo "RESULT 2"
 echo "OK"
 
 # Now we do the actual pulls
-cd /opt/src/github.com/google/git-appraise && \
+cd /opt/src/github.com/google/git-review && \
     git pull origin master && \
     git fetch origin '+refs/heads/*:refs/remotes/origin/*' && \
     git fetch origin '+refs/pull/*:refs/pull/*' && \
-    /opt/bin/git-appraise pull
-cd /opt/src/github.com/google/git-appraise-web &&
+    /opt/bin/git-review pull
+cd /opt/src/github.com/ajzaff/git-review-web &&
     git pull origin master && \
     git fetch origin '+refs/heads/*:refs/remotes/origin/*' && \
     git fetch origin '+refs/pull/*:refs/pull/*' && \
-    /opt/bin/git-appraise pull
+    /opt/bin/git-review pull

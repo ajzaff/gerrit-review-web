@@ -17,7 +17,7 @@ help out and possibly guide you. Coordinating up front avoids frustrations later
 ### Code reviews
 All submissions, including submissions by project members, require review. You
 may use a Github pull request to start such a review, but the review itself
-will be conducted using git-appraise (via the
+will be conducted using git-review (via the
 [pull-request mirror](https://github.com/google/git-pull-request-mirror)).
 
 ### The small print

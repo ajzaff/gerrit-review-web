@@ -25,9 +25,9 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/google/git-appraise-web/api"
-	"github.com/google/git-appraise-web/third_party/assets"
-	"github.com/google/git-appraise/repository"
+	"github.com/ajzaff/git-review-web/api"
+	"github.com/ajzaff/git-review-web/third_party/assets"
+	"github.com/ajzaff/git-review/repository"
 )
 
 var port int

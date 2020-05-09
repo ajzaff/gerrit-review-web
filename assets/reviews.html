@@ -31,10 +31,10 @@ limitations under the License.
 
   <script src="/static/reviews.js"></script>
 </head>
-<body ng-app="gitAppraiseWeb">
+<body ng-app="gitreviewWeb">
   <dom-module id="reviews-list">
     <template>
-      <paper-toolbar><span class="title">Git-Appraise Web UI > {{path}}</span></paper-toolbar>
+      <paper-toolbar><span class="title">Git-review Web UI > {{path}}</span></paper-toolbar>
       <paper-listbox>
         <review-list repo="{{repo}}" title="Open Reviews" reviews="{{pending}}"></review-list>
         <review-list repo="{{repo}}" title="Closed Reviews" reviews="{{submitted}}"></review-list>

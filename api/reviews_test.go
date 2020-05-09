@@ -17,7 +17,7 @@ limitations under the License.
 package api
 
 import (
-	"github.com/google/git-appraise/repository"
+	"github.com/ajzaff/git-review/repository"
 
 	"testing"
 )

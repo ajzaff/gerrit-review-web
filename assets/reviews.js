@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-var gitAppraiseWeb=angular.module("gitAppraiseWeb", []);
+var gitreviewWeb=angular.module("gitreviewWeb", []);
 
 // Get a repository name from the full path.
 function getLastPathElement(path) {
@@ -38,7 +38,7 @@ function getSummary(desc) {
   return result;
 }
 
-gitAppraiseWeb.controller("listRepos", function($scope,$http) {
+gitreviewWeb.controller("listRepos", function($scope,$http) {
   $http.get("/api/repos").success(
     function(response) {$scope.repositories = processListReposResponse(response);});
 
@@ -57,7 +57,7 @@ gitAppraiseWeb.controller("listRepos", function($scope,$http) {
   }
 });
 
-gitAppraiseWeb.controller("listReviews", function($scope,$http,$location) {
+gitreviewWeb.controller("listReviews", function($scope,$http,$location) {
   var repo = $location.search()['repo'];
   $scope.repo = repo;
   $http.get("/api/repo_summary?repo=" + repo).success(
@@ -103,7 +103,7 @@ gitAppraiseWeb.controller("listReviews", function($scope,$http,$location) {
   }
 });
 
-gitAppraiseWeb.controller("getReview", function($scope,$http,$location) {
+gitreviewWeb.controller("getReview", function($scope,$http,$location) {
   var repo = $location.search()['repo'];
   var review = $location.search()['review'];
   $http.get("/api/repo_summary?repo=" + repo).success(

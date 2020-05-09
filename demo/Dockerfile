@@ -33,8 +33,8 @@ RUN wget -O /opt/go1.6.2.linux-amd64.tar.gz \
     tar -C /usr/local -xzf /opt/go1.6.2.linux-amd64.tar.gz && \
     export PATH=${PATH}:/usr/local/go/bin/:/opt/bin/ && \
     export GOPATH=/opt/ && \
-    go get github.com/google/git-appraise/git-appraise && \
-    go get github.com/google/git-appraise-web/git-appraise-web && \
+    go get github.com/google/git-review/git-review && \
+    go get github.com/ajzaff/git-review-web/git-review-web && \
     rm -rf /opt/go1.4.2.linux-amd64.tar.gz && \
     rm -rf /usr/local
 

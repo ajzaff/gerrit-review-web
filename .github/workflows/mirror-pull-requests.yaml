@@ -13,10 +13,10 @@ jobs:
         with:
           go-version: 1.14
 
-      - name: Setup git-appraise and the pr mirror
+      - name: Setup git-review and the pr mirror
         run: |
-          go get github.com/google/git-appraise/git-appraise
-          go get github.com/google/git-pull-request-mirror/batch
+          go get github.com/ajzaff/git-review/git-review
+          go get github.com/ajzaff/git-pull-request-mirror/batch
 
       - name: Configure git for the PR mirror
         run: |
@@ -30,13 +30,13 @@ jobs:
           git fetch origin '+refs/pull/*:refs/pull/*'
 
       - name: Pull existing reviews
-        run: go run github.com/google/git-appraise/git-appraise pull
+        run: go run github.com/ajzaff/git-review/git-review pull
 
       - name: Mirror pull requests into local reviews
-        run: go run github.com/google/git-pull-request-mirror/batch --target '${{ github.repository }}' --local ./ --auth-token '${{ secrets.PR_MIRROR_TOKEN }}'
+        run: go run github.com/ajzaff/git-pull-request-mirror/batch --target '${{ github.repository }}' --local ./ --auth-token '${{ secrets.PR_MIRROR_TOKEN }}'
 
       - name: Merge any upstream review changes
-        run: go run github.com/google/git-appraise/git-appraise pull
+        run: go run github.com/ajzaff/git-review/git-review pull
 
       - name: Push updated reviews back upstream
-        run: go run github.com/google/git-appraise/git-appraise push
+        run: go run github.com/ajzaff/git-review/git-review push

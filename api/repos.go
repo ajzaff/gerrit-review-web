@@ -22,8 +22,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/google/git-appraise/repository"
-	"github.com/google/git-appraise/review"
+	"github.com/ajzaff/git-review/repository"
+	"github.com/ajzaff/git-review/review"
 )
 
 // RepoListItem represents one entry in the result of calling the API to list repositories.
